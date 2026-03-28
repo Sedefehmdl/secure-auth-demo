@@ -1,0 +1,133 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f5f5f5;
+  color: #1a1a1a;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+.subtitle { color: #666; font-size: 0.9rem; margin-bottom: 1.25rem; }
+
+.toggle-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.toggle-row button {
+  padding: 8px 24px;
+  border: 1.5px solid #ccc;
+  border-radius: 999px;
+  background: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.toggle-row button.active.vulnerable { background: #fee2e2; border-color: #f87171; color: #991b1b; }
+.toggle-row button.active.secure { background: #dcfce7; border-color: #4ade80; color: #166534; }
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1.5px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-vulnerable { border-color: #fca5a5; }
+.card-secure { border-color: #86efac; }
+.success-card { text-align: center; border-color: #86efac; background: #f0fdf4; }
+
+.mode-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #888;
+}
+
+.tab-row { display: flex; gap: 8px; }
+.tab-row button {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.tab-row button.active { background: #1a1a1a; color: white; border-color: #1a1a1a; }
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.15s;
+}
+input:focus { border-color: #6366f1; }
+
+.submit {
+  width: 100%;
+  padding: 10px;
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.submit:disabled { opacity: 0.4; cursor: not-allowed; }
+.submit:hover:not(:disabled) { opacity: 0.85; }
+
+.message {
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+}
+.message.error { background: #fee2e2; color: #991b1b; }
+.message.success { background: #dcfce7; color: #166534; }
+
+.vuln-note { font-size: 0.78rem; color: #dc2626; background: #fef2f2; padding: 6px 10px; border-radius: 6px; }
+.attempt-counter { font-size: 0.8rem; color: #d97706; }
+
+.explainer {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+}
+
+.explainer h2 { font-size: 1rem; margin-bottom: 1rem; }
+.explainer ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.explainer li { font-size: 0.875rem; color: #444; display: flex; align-items: center; gap: 8px; }
+
+.tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.tag.owasp { background: #ede9fe; color: #4c1d95; }
+.tag.vuln { background: #fee2e2; color: #7f1d1d; }
