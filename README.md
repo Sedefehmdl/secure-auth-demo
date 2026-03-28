@@ -2,7 +2,7 @@
 
 An interactive React app demonstrating common authentication vulnerabilities and their fixes.
 
-**Live demo:** [link coming soon]
+**Live demo:** [secure-auth-demo-two.vercel.app](https://secure-auth-demo-two.vercel.app/)
 
 ## What it demonstrates
 
